@@ -52,7 +52,6 @@
                 text += "<table>";
                    
 
-                if (answer == "A") {
                     for (var i = 0; i<=aMajScale.length(); i++) {
 
                         text += "<th>A Major Scale</th><tr>";
@@ -74,8 +73,6 @@
 
                     text += "</table>";
                     document.getElementById('answer').innerHTML = text;
-                }
-
                 
 
             }
@@ -84,6 +81,15 @@
         </script>
 
 
+        <form>
+            <table>
+                <tr>
+                    <td> <button type="button" onclick="Display()">A</button></td>
+                </tr>
+            </table>
+
+
+        </form>
         <p>Please enter the musical note you would like to know more about : <input type ="text" id='answer' onchange="Display()"> </p>
         <p id = 'answer'></p>
     </body>

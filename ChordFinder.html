@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chord Finder</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        
+        <script>
+
+            var answer = document.getElementById('answer');
+            text = "";
+            text += "<table>";
+            text += "<tr><td>";       
+
+            var aMajScale = ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#'].getElementById('A');             //Notes of the A major scale
+            var aMinScale = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];                //Notes of the A minor scale
+            var aMajKey =   ['A', 'Bm', 'C#m', 'D', 'E', 'F#m', 'G#dim'];       //Chords in the A major key
+            var aMinKey =   ['Am', 'Bdim', 'C', 'Dm', 'Em', 'F'];               //Chords in the A minor key
+            var bMajScale = ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#'];           //Notes of the B major scale
+            var bMinScale = ['B', 'C#', 'D', 'E', 'F#', 'G', 'A'];              //Notes of the B minor scale
+            var bMajKey =   ['B', 'C#', 'D#m', 'E', 'F#', 'G#m', 'A#dim'];      //Chords of the B major key
+            var bMinKey =   ['Bm', 'C#dim', 'D', 'Em', 'F#m', 'G#', 'A#'];      //Chords of the B minor key
+            var cMajScale = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];                //Notes of the C major scale
+            var cMinScale = ['C', 'D', 'D#', 'F', 'G', 'G#', 'A#'];             //Notes of the C minor scale
+            var cMajKey   = ['C', 'Dm', 'Em', 'F', 'G', 'Am', 'Bdim'];          //Chords in the C major key
+            var cMinKey =   ['Cm', 'Ddim', 'D#', 'Fm', 'Gm', 'G#', 'A#'];       //Chords in the C minor key
+            var dMajScale = ['D', 'E', 'F#', 'G', 'A', 'B', 'C#'];              //Notes of the D major scale
+            var dMinScale = ['D', 'E', 'F', 'G', 'A', 'A#', 'C'];               //Notes of the D minor scale
+            var dMajKey =   ['D', 'Em', 'F#m', 'G', 'A', 'Bm', 'C#dim'];        //Chords of the D major key
+            var dMinKey =   ['Dm', 'Edim', 'F', 'Gm', 'Am', 'A#', 'C'];         //Chords of the D minor key
+            var eMajScale = ['E', 'F#', 'G#', 'A', 'B', 'C#', 'D#'];            //Notes of the E major scale
+            var eMinScale = ['E', 'F#', 'G', 'A', 'B', 'C', 'D'];               //Notes of the E minor scale
+            var eMajKey =   ['E', 'F#m', 'G#m', 'A', 'B', 'C#m', 'D#dim'];      //Chords of the E major key
+            var eMinKey =   ['Em', 'F#dim', 'G', 'Am', 'Bm', 'C', 'D#'];        //Chords of the E minor key
+            var fMajScale = ['F', 'G', 'A', 'A#', 'C', 'D', 'E'];               //Notes of the F major scale
+            var fMinScale = ['F', 'G', 'G#', 'A#', 'C', 'C#', 'D#'];            //Notes of the F minor scale
+            var fMajKey =   ['F', 'Gm', 'Am', 'A#', 'C', 'Dm', 'Edim'];         //Chords of the F major key
+            var fMinKey =   ['Fm', 'Gdim', 'G#', 'A#m', 'Cm', 'C#', 'D#'];      //Chords of the F minor key
+            var gMajScale = ['G', 'A', 'B', 'C', 'D', 'E', 'F#'];               //Notes of the G major scale
+            var gMinScale = ['G', 'A', 'A#', 'C', 'D', 'D#', 'F'];              //Notes of the G minor scale
+            var gMajKey =   ['G', 'Am', 'Bm', 'C', 'D', 'Em', 'F#min'];         //Chords of the G major key
+            var gMinKey =   ['Gm', 'Adim', 'A#', 'Cm', 'Dm', 'D#', 'F'];        //Chords of the g minor key
+
+            function Display() {
+
+                if (answer == 'A') {
+                    for (var i = 0; i<=aMajScale.length(); i++) {
+                        text += "A Major Scale</td>";
+                        text += "<td>" + aMajScale[i] + "</td>";
+
+                        if (i == aMajScale.length()) {
+                            text+= "</tr>";
+                        }
+                    }
+
+                    for (var i = 0; i<aMajKey.length(); i++) {
+                        text += "<tr><td>A Major Key</td>";
+                        text += "<td>" + aMajKey[i] + "</td>";
+
+                        if (i == aMajKey.length()) {
+                            text += "</tr>";
+                        }
+                    }
+                }
+
+            }
+            
+
+
+
+        </script>
+
+
+        <p>Please enter the musical note you would like to know more about : <input type ="text" id="answer"> </p>
+        <p id = "answer"></p>
+    </body>
+</html>

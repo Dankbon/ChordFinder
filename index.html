@@ -16,8 +16,7 @@
 
             var answer = document.getElementById('answer');
             text = "";
-            text += "<table>";
-            text += "<tr><td>";       
+               
 
             var aMajScale = ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#'].getElementById('A');             //Notes of the A major scale
             var aMinScale = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];                //Notes of the A minor scale
@@ -50,9 +49,13 @@
 
             function Display() {
 
+                text += "<table>";
+                   
+
                 if (answer == "A") {
                     for (var i = 0; i<=aMajScale.length(); i++) {
-                        text += "A Major Scale</td>";
+
+                        text += "<th>A Major Scale</th><tr>";
                         text += "<td>" + aMajScale[i] + "</td>";
 
                         if (i == aMajScale.length()) {
@@ -61,7 +64,7 @@
                     }
 
                     for (var i = 0; i<aMajKey.length(); i++) {
-                        text += "<tr><td>A Major Key</td>";
+                        text += "<th><td>A Major Key</th><tr>";
                         text += "<td>" + aMajKey[i] + "</td>";
 
                         if (i == aMajKey.length()) {
@@ -69,6 +72,7 @@
                         }
                     }
 
+                    text += "</table>";
                     document.getElementById('answer').innerHTML = text;
                 }
 

@@ -15,7 +15,7 @@
         <script>
 
             var answer = document.getElementById('answer');
-            text = "";
+            
                
 
             var aMajScale = ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#'].getElementById('A');             //Notes of the A major scale
@@ -49,31 +49,10 @@
 
             function Display() {
 
-                text += "<table>";
+                for (var i = 0; i<=aMajScale.length(); i++) {
+                    document.write(aMajScale[i]);
+                }
                    
-
-                    for (var i = 0; i<=aMajScale.length(); i++) {
-
-                        text += "<th>A Major Scale</th><tr>";
-                        text += "<td>" + aMajScale[i] + "</td>";
-
-                        if (i == aMajScale.length()) {
-                            text+= "</tr>";
-                        }
-                    }
-
-                    for (var i = 0; i<aMajKey.length(); i++) {
-                        text += "<th><td>A Major Key</th><tr>";
-                        text += "<td>" + aMajKey[i] + "</td>";
-
-                        if (i == aMajKey.length()) {
-                            text += "</tr>";
-                        }
-                    }
-
-                    text += "</table>";
-                    document.getElementById('answer').innerHTML = text;
-                
 
             }
             
@@ -90,7 +69,8 @@
 
 
         </form>
-        <p>Please enter the musical note you would like to know more about : <input type ="text" id='answer' onchange="Display()"> </p>
-        <p id = 'answer'></p>
+
+        <p>Please enter the musical note you would like to know more about : <input type ="text" id="answer" onchange="Display()"> </p>
+        <p id = "answer"></p>
     </body>
 </html>

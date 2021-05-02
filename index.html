@@ -45,14 +45,21 @@
             var gMajScale = ['G', 'A', 'B', 'C', 'D', 'E', 'F#'];               //Notes of the G major scale
             var gMinScale = ['G', 'A', 'A#', 'C', 'D', 'D#', 'F'];              //Notes of the G minor scale
             var gMajKey =   ['G', 'Am', 'Bm', 'C', 'D', 'Em', 'F#min'];         //Chords of the G major key
-            var gMinKey =   ['Gm', 'Adim', 'A#', 'Cm', 'Dm', 'D#', 'F'];        //Chords of the g minor key
+            var gMinKey =   ['Gm', 'Adim', 'A#', 'Cm', 'Dm', 'D#', 'F'];        //Chords of the G minor key
 
-            function Display() {
+            function displayA() {
 
                 for (var i = 0; i<=aMajScale.length(); i++) {
-                  document.getElementById('aMajScale').innerHTML = "A Major Scale: " + aMajScale[i];
+                  document.getElementById('aMajScale').innerHTML = "A Major Scale: " + aMajScale[i] + " ";
                 }
                    
+
+            }
+            function displayB() {
+
+                for (var i = 0; i<=aMajScale.length(); i++) {
+                  document.getElementById('bMajScale').innerHTML = "B Major Scale: " + bMajScale[i] + " ";
+                }
 
             }
             
@@ -62,11 +69,10 @@
 
         <form>
            
-                 <button type="button" onclick="Display()">A</button>
+                 <button type="button" onclick="displayA()">A</button>
+                 <button type="button" onclick="displayB()">B</button>
                 
         </form>
 
-        <p>Please enter the musical note you would like to know more about : <input type ="text" id="answer" onchange="Display()"> </p>
-        <p id = "aMajScale"></p>
     </body>
 </html>

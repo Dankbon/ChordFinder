@@ -18,7 +18,7 @@
             
                
 
-            var aMajScale = ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#'].getElementById('A');             //Notes of the A major scale
+            var aMajScale = ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#'];             //Notes of the A major scale
             var aMinScale = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];                //Notes of the A minor scale
             var aMajKey =   ['A', 'Bm', 'C#m', 'D', 'E', 'F#m', 'G#dim'];       //Chords in the A major key
             var aMinKey =   ['Am', 'Bdim', 'C', 'Dm', 'Em', 'F'];               //Chords in the A minor key
@@ -50,11 +50,12 @@
             function displayA() {
 
                 for (var i = 0; i<=aMajScale.length(); i++) {
-                  document.getElementById('aMajScale').innerHTML = "A Major Scale: " + aMajScale[i] + " ";
+                  document.getElementById('aMajScale') = "A Major Scale: " + aMajScale[i] + " ";
                 }
                    
 
             }
+
             function displayB() {
 
                 for (var i = 0; i<=aMajScale.length(); i++) {
